@@ -11,52 +11,63 @@
 
   <script>
 
-    let movie = 'movie1'
-    let song = 'song1'
-    let game = 'game1'
-    let food = 'food1'
+    let favorites = ['movie1', 'song1', 'game1', 'food1']
+    let uFavorites = []
 
-    let uMovie = prompt('What is your favorite movie?')
+    // let movie = 'movie1'
+    // let song = 'song1'
+    // let game = 'game1'
+    // let food = 'food1'
 
-    if (uMovie === movie) {
+    // let uMovie = prompt('What is your favorite movie?')
+
+    uFavorites.push(prompt('What is your favorite movie?'))
+
+    if (uFavorites[0] === favorites[0]) {
       alert(`Hey! That's my favorite too!`)
     }
 
-    let uSong = prompt('What is your favorite song?')
+    // let uSong = prompt('What is your favorite song?')
 
-    if (uSong === song) {
+    uFavorites.push(prompt('What is your favorite song?'))
+
+    if (uFavorites[1] === favorites[1]) {
       alert(`Hey! That's my favorite too!`)
     }
 
-    let uGame = prompt('What is your favorite game?')
+    // let uGame = prompt('What is your favorite game?')
 
-    if (uGame === game) {
+    uFavorites.push(prompt('What is your favorite game?'))
+
+    if (uFavorites[2] === favorites[2]) {
       alert(`Hey! That's my favorite too!`)
     }
 
-    let uFood = prompt('What is your favorite food?')
+    // let uFood = prompt('What is your favorite food?')
 
-    if (uFood === food) {
+    uFavorites.push(prompt('What is your favorite food?'))
+
+    if (uFavorites[3] === favorites[3]) {
       alert(`Hey! That's my favorite too!`)
     }
 
     console.log(`
       My Favorites
       ----------
-      Movie: ${movie}
-      Song: ${song}
-      Game: ${game}
-      Food: ${food}
+      Movie: ${favorites[0]}
+      Song: ${favorites[1]}
+      Game: ${favorites[2]}
+      Food: ${favorites[3]}
       ----------
     `)
 
     console.log(`
       Your Favorites
       ----------
-      Movie: ${uMovie}
-      Song: ${uSong}
-      Game: ${uGame}
-      Food: ${uFood}
+      Movie: ${uFavorites[0]}
+      Song: ${uFavorites[1]}
+      Game: ${uFavorites[2]}
+      Food: ${uFavorites[3]}
       ----------
     `)
 
