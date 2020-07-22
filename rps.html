@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    let choices = ['r', 'p', 's']
+    let ties = 0
+    let wins = 0
+    let losses = 0
+
+    for (let i = 0; i < 10; i++) {
+
+      let choice = prompt('What would you like to play? Choose r, p, or s.')
+
+      let compChoice = choices[Math.floor(Math.random() * choices.length)]
+
+      if (choices.indexOf(choice) !== -1) {
+        if (choice === compChoice) {
+          ties++
+          alert(`It's a tie! Total ties so far: ${ties}`)
+        } else if ((choice === 'r' && compChoice === 's') ||
+          (choice === 'p' && compChoice === 'r') ||
+          (choice === 's' && compChoice === 'p')) {
+          wins++
+          alert(`You win! Total wins so far: ${wins}`)
+        } else {
+          losses++
+          alert(`You lost! Total losses so far: ${losses}`)
+        }
+      } else {
+        alert('Please make a valid choice!')
+      }
+    }
+
+    alert(`
+      Results
+      ----------
+      Wins: ${wins}
+      Losses: ${losses}
+      Ties: ${ties}
+      ----------
+    `)
+
+  </script>
+</body>
+
+</html>
